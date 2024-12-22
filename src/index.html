@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../dist/styles.css" rel="stylesheet" />
+  <title>Bác sĩ Profile</title>
+</head>
+
+<body class="bg-[#029cf6] min-h-screen overflow-x-hidden">
+  <div class="flex items-center justify-center w-full">
+    <!-- Container tổng -->
+    <div class="flex w-full flex-col sm:flex-row sm:max-w-[980px] sm:h-[866px]">
+      
+      <!--  hexagon -->
+      <div 
+        class="relative w-full min-h-[400px]
+                   sm:w-1/2 sm:h-auto
+                   sm:[clip-path:inset(0_-100%_0_0)]">
+        
+        <div
+          class="relative w-full max-w-lg mx-auto aspect-square
+                     scale-75 sm:scale-100
+                     sm:translate-x-[-8%]" 
+        >
+          <div
+            id="hexagon-portrait"
+            class="absolute inset-0 z-10 w-[481px] h-[546px]
+                   translate-y-8"
+          ></div>
+
+          <div
+            id="hexagon-stethoscope"
+            class="absolute w-[365px] h-[414px] z-20
+                   translate-y-[80%] translate-x-[45%]"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Text content -->
+      <div class="flex flex-col justify-between w-full py-8 text-center
+                  p-4 sm:p-[100px]
+                  sm:w-1/2 sm:mt-0 sm:text-left">
+        
+        <p class="font-[Montserrat] text-[20px] sm:text-[28px]
+                  leading-[32px] sm:leading-[44px] font-semibold text-white mb-6">
+          Tôi không nghĩ mình đang khác đi, bởi tôi là một người sống khá đơn giản.
+          Tôi biết những người yêu mến tôi là vì sự chân thật và giản dị.
+        </p>
+
+        <div>
+          <h1 class="font-[Montserrat] font-bold text-[24px] sm:text-[28px]
+                     leading-[34px] text-[#FFE81A] mb-2">
+            THU QUỲNH
+          </h1>
+          <h2 class="font-[Montserrat] text-[16px] sm:text-[18px] leading-[26px]
+                     tracking-[2px] text-white font-bold">
+            Bác sĩ
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import HexagonImage from './HexagonImage.js';
+
+    new HexagonImage('#hexagon-portrait',
+      'https://www.felixhospital.com/sites/default/files/2024-08/dr-dk-gupta.webp',
+      {
+        backgroundColor: '#029cf6',
+      }
+    );
+
+    new HexagonImage('#hexagon-stethoscope',
+      './public/assets/portrait-2.png',
+      {
+        showBorder: false,
+        backgroundColor: '#07f9fe',
+      }
+    );
+  </script>
+</body>
+</html>
